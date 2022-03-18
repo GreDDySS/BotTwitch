@@ -1,0 +1,20 @@
+{
+  "name": "bottwitch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "dotenv": "^10.0.0",
+    "humanize-duration": "^3.27.1",
+    "node-fetch": "^3.1.0",
+    "request": "^2.88.2",
+    "tmi.js": "^1.8.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "GreDDySS",
+  "license": "ISC"
+}
