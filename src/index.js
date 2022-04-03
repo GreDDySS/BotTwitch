@@ -13,6 +13,7 @@ client.connect();
 
 client.on('connected', async (address, port) => {
     console.log('Connected done!');
+    client.say("greddyss", "Chatting V1")
     require('./utils/commandsLoader')(client);
 });
 
@@ -23,12 +24,10 @@ client.on('message', async (channel, user, message, self) =>{
     const args = messageArray.slice(1);
     const allArgs = args.join(' ');
     const command = messageArray[0];
-    let mes = `\n${user['display-name']}: ${message}`;
-    fs.appendFileSync('./src/log.txt', mes);
-
+    
     var isMod = false;
     var isDev = false;
-
+    
     if(process.env.BOT_OWNER == user['user-id']) isDev = true;
     if(process.env.BOT_OWNER == user['user-id'] || user.mod || user.username == channel.slice(1)) isMod = true;
 
@@ -45,4 +44,18 @@ client.on('message', async (channel, user, message, self) =>{
 
     cmd.run(client, channel, user, message, args);
 
+});
+
+client.on("message", async (channel, user, message, self) => {
+    if (self) return;
+    if (user.username === undefined && "NOT_GreDDySS") {
+        return;
+    } else if (user['user-id'] === 113050046) {
+        return
+    } else if (message.startsWith("`")) {
+        return
+    } else {
+        let mes = `\n${user.username}: ${message}`;
+        fs.appendFileSync('./src/log.txt', mes);
+    }
 })
