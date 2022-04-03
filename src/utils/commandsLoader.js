@@ -25,7 +25,8 @@ module.exports = client => {
 
                     props.help.aliases.forEach(alias => {
                         client.aliases.set(alias, props.help.name);
-                    })
+                    });
+
 
                 });
             })
