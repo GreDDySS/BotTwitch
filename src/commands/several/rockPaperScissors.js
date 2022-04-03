@@ -62,7 +62,7 @@ exports.run = async (client, channel, user, message, args) => {
         block.push(user.username);
         setTimeout(() =>{
             block = block.filter(u => u !== user.username);
-        }, 15000)
+        }, 5000)
     } 
 }
 let block = [];
