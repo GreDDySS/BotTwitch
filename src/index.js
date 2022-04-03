@@ -5,7 +5,7 @@ const options = {
     options: { debug: false },
     connection: { reconnect: true, secure: true },
     identity: { username: process.env.BOT_USERNAME, password: process.env.BOT_PASSWORD },
-    channels: ['iamplugg']
+    channels: ['greddyss']
 }
 
 const client = new tmi.client(options);
