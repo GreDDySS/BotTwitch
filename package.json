@@ -5,16 +5,17 @@
   "main": "index.js",
   "dependencies": {
     "child_process": "^1.0.2",
-    "convert": "^4.4.2",
-    "dotenv": "^10.0.0",
+    "dotenv": "^16.0.0",
     "humanize-duration": "^3.27.1",
-    "node-fetch": "^3.1.0",
+    "ioredis": "^5.0.3",
+    "node-fetch": "^3.2.3",
+    "picocolors": "^1.0.0",
     "request": "^2.88.2",
     "tmi.js": "^1.8.5",
-    "weather-js": "^2.0.0"
+    "winston": "^3.6.0"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node Bot.js"
   },
   "author": "GreDDySS",
   "license": "ISC"
